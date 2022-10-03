@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Страница регистрации</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Страница регистрации пользователя</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ register_form.as_p }}
+            <button type="submit">Sing Up</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Блог</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Блог</h1>
+        {% if blog_list %}
+            {% for blog in blog_list %}
+                <div>
+                    <h2>
+                        <a href="/blog/{{ blog.id }}">{{ blog.title }}</a>
+                    </h2>
+                    <p>{{ blog.contents }}</p>
+                    <p>{{ blog.date_created }}</p>
+                    <p>{{ blog.author }}</p>
+                    <p>{{ blog.id }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Записей пока нет</p> 
+        {% endif %}
+    </body>
+</html>

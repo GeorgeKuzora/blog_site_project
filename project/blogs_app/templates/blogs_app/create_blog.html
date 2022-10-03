@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Создание записи блога</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        {% if not request.user.is_authenticated %}
+            <p>Вы не авторизированы</p>
+        {% else %}
+            <h1>Создание поста для блога {{ request.user.username }}</h1>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ blog_form.as_p }}
+                {{ file_form.as_p }}
+                <button type="submit">Создать</button>
+            </form>
+        {% endif %}
+    </body>
+</html>

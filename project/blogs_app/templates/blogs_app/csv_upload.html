@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Массовое добавление блогов</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        {% if request.user.is_authenticated %}
+            <h1>Массовое добавление блогов</h1>
+            <p>Загрузите файл в формате CSV с данными о создаваемых блогах</p>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ upload_form }}
+                <button type="submit">Загрузить</button>
+            </form>
+        {% else %}
+            <p>Для публикации блога войдите в систему</p>
+        {% endif %}
+    </body>
+</html>
