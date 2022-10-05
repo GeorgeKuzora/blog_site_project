@@ -1,9 +1,10 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Блоги{% endblock %}
+{% block title %}{% trans "Blogs" %}{% endblock %}
 
 {% block body %}
-    <h1>Блог</h1>
+    <h1>{% trans "All blogs" %}</h1>
     {% if blog_list %}
         {% for blog in blog_list %}
             <div>
@@ -17,6 +18,6 @@
             </div>
         {% endfor %}
     {% else %}
-        <p>Записей пока нет</p>
+        <p>{% trans "There is no posts yet" %}</p>
     {% endif %}
 {% endblock %}

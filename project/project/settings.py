@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "users_app",
-    "blogs_app",
+    "blogs_app.apps.BlogsAppConfig",
+    "users_app.apps.UsersAppConfig",
 ]
 
 MIDDLEWARE = [
@@ -121,6 +121,8 @@ LANGUAGES = [
     ('ru', 'Русский'),
     ('en', 'English'),
 ]
+
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale'),]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/

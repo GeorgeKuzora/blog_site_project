@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-05 13:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: blogs_app/apps.py:7
+msgid "blog_posts"
+msgstr "Публикации"
+
+#: blogs_app/models.py:7
+msgid "Title"
+msgstr "Заголовок"
+
+#: blogs_app/models.py:8
+msgid "Contents"
+msgstr "Содержание"
+
+#: blogs_app/models.py:9
+msgid "Creation date"
+msgstr "Дата создания"
+
+#: blogs_app/models.py:10
+msgid "Author"
+msgstr "Автор"
+
+#: blogs_app/models.py:13
+msgid "blog"
+msgstr "Публикация"
+
+#: blogs_app/models.py:14
+msgid "blogs"
+msgstr "Публикации"
+
+#: blogs_app/models.py:25
+msgid "image"
+msgstr "Изображение"
+
+#: blogs_app/models.py:26
+msgid "images"
+msgstr "Изображения"
+
+#: blogs_app/models.py:36
+msgid "csv file"
+msgstr "csv файл"
+
+#: blogs_app/models.py:37
+msgid "csv files"
+msgstr "csv файлы"
+
+#: blogs_app/templates/blogs_app/blog_list.html:4
+msgid "Blogs"
+msgstr "Список блогов"
+
+#: blogs_app/templates/blogs_app/blog_list.html:7
+msgid "All blogs"
+msgstr "Список блогов"
+
+#: blogs_app/templates/blogs_app/blog_list.html:21
+msgid "There is no posts yet"
+msgstr "Опубликованных записей пока нет"
+
+#: blogs_app/templates/blogs_app/create_blog.html:4
+msgid "Create new blog"
+msgstr "Создание нового блога"
+
+#: blogs_app/templates/blogs_app/create_blog.html:8
+msgid "You are not authorisated"
+msgstr "Вы не авторизованны"
+
+#: blogs_app/templates/blogs_app/create_blog.html:10
+msgid "Create new post for the blog"
+msgstr "Опубликовать новую запись для блога"
+
+#: blogs_app/templates/blogs_app/create_blog.html:15
+msgid "Create"
+msgstr "Создать"
+
+#: blogs_app/templates/blogs_app/csv_upload.html:4
+msgid "Mass blogs adding"
+msgstr "Массовое добавление записей"
+
+#: blogs_app/templates/blogs_app/csv_upload.html:9
+msgid "Upload CSV file with information about blogs that will be created"
+msgstr "Загрузите CSV файл с информацией о блогах которые вы хотите создать"
+
+#: blogs_app/templates/blogs_app/csv_upload.html:13
+msgid "Upload"
+msgstr "Загрузить"
+
+#: blogs_app/templates/blogs_app/csv_upload.html:16
+msgid "Please enter the system for publication"
+msgstr "Пожалуйста войдите в систему для публикации"
+
+#: project/templates/base.html:5
+msgid "Blog site"
+msgstr "Сайт для публикации блогов"
+
+#: project/templates/base.html:12
+msgid "Welcome on the site"
+msgstr "Добро пожаловать на сайт"
+
+#: project/templates/base.html:15 project/templates/base.html:37
+#: users_app/templates/users_app/login.html:11
+msgid "Login"
+msgstr "Вход в систему"
+
+#: project/templates/base.html:15
+msgid "or"
+msgstr "или"
+
+#: project/templates/base.html:15
+msgid "register"
+msgstr "зарегистрируйтесь"
+
+#: project/templates/base.html:15
+msgid "on the site"
+msgstr "на сайте"
+
+#: project/templates/base.html:37
+msgid "Register"
+msgstr "Регистрация"
+
+#: project/templates/base.html:37
+msgid "Logout"
+msgstr "Выход"
+
+#: project/templates/base.html:37
+msgid "Main page"
+msgstr "Главная страница"
+
+#: project/templates/base.html:42
+msgid "Powered by Django"
+msgstr "Создано на Django"
+
+#: users_app/apps.py:8
+msgid "users"
+msgstr "Пользователи"
+
+#: users_app/templates/users_app/login.html:4
+#: users_app/templates/users_app/login.html:7
+msgid "Login page"
+msgstr "Страница для входа"
+
+#: users_app/templates/users_app/registration.html:4
+msgid "Registration page"
+msgstr "Старница регистрации"
+
+#: users_app/templates/users_app/registration.html:6
+msgid "User registration page"
+msgstr "Страница регистрации пользователя"
+
+#: users_app/templates/users_app/registration.html:10
+msgid "Sing Up"
+msgstr "Зарегистрироваться"
+
+#: users_app/templates/users_app/user_edit.html:4
+#: users_app/templates/users_app/user_edit.html:7
+msgid "User edit page"
+msgstr "Страница изменения данных пользователя"
+
+#: users_app/templates/users_app/user_edit.html:11
+msgid "Confirm"
+msgstr "Подтвердить"

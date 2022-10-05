@@ -1,16 +1,18 @@
 {% extends "base.html" %}
-{% block title %}Массовое добавление блогов{% endblock %}
+{% load i18n %}
+
+{% block title %}{% trans "Mass blogs adding" %}{% endblock %}
 
 {% block body %}
     {% if request.user.is_authenticated %}
-        <h1>Массовое добавление блогов</h1>
-        <p>Загрузите файл в формате CSV с данными о создаваемых блогах</p>
+        <h1>{% trans "Mass blogs adding %}</h1>
+        <p>{% trans "Upload CSV file with information about blogs that will be created" %}</p>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ upload_form }}
-            <button type="submit">Загрузить</button>
+            <button type="submit">{% trans "Upload" %}</button>
         </form>
     {% else %}
-        <p>Для публикации блога войдите в систему</p>
+        <p>{% trans "Please enter the system for publication" %}</p>
     {% endif %}
 {% endblock %}

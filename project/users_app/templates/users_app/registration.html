@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Страница регистрации{% endblock %}
+{% block title %}{% trans "Registration page" %}{% endblock %}
 {% block body %}
-    <h1>Страница регистрации пользователя</h1>
+    <h1>{% trans "User registration page" %}</h1>
     <form method="post">
         {% csrf_token %}
         {{ register_form.as_p }}
-        <button type="submit">Sing Up</button>
+        <button type="submit">{% trans "Sing Up" %}</button>
     </form>
 {% endblock %}

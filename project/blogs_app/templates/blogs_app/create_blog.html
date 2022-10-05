@@ -1,20 +1,18 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-        <title>Создание записи блога</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-        {% if not request.user.is_authenticated %}
-            <p>Вы не авторизированы</p>
-        {% else %}
-            <h1>Создание поста для блога {{ request.user.username }}</h1>
-            <form method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ blog_form.as_p }}
-                {{ file_form.as_p }}
-                <button type="submit">Создать</button>
-            </form>
-        {% endif %}
-    </body>
-</html>
+{% block title %}{% trans "Create new blog" %}{% endblock %}
+
+{% block body %}
+    {% if not request.user.is_authenticated %}
+        <p>{% trans "You are not authorisated" %}</p>
+    {% else %}
+        <h1>{% trans "Create new post for the blog" %} {{ request.user.username }}</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ blog_form.as_p }}
+            {{ file_form.as_p }}
+            <button type="submit">{% trans "Create" %}</button>
+        </form>
+    {% endif %}
+{% endblock %}

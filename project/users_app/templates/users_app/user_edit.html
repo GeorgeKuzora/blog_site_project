@@ -1,12 +1,13 @@
 {% extends "base.html" %}
+{% load i18n %}
 
-{% block title %}Страница редактирования пользователя{% endblock %}
+{% block title %}{% trans "User edit page" %}{% endblock %}
 
 {% block body %}
-    <h1>Страница редактрования пользователя</h1>
+    <h1>{% trans "User edit page" %}</h1>
     <form method="post">
         {% csrf_token %}
         {{ edit_form.as_p }}
-        <button type="submit">Confirm</button>
+        <button type="submit">{% trans "Confirm" %}</button>
     </form>
 {% endblock %}
