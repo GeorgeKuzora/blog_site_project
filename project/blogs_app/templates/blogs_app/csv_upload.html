@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Mass blogs adding" %}{% endblock %}
+{% block title %}{% trans "csv upload" %}{% endblock %}
 
 {% block body %}
     {% if request.user.is_authenticated %}
-        <h1>{% trans "Mass blogs adding %}</h1>
+        <h1>{% trans "Mass blogs adding" %}</h1>
         <p>{% trans "Upload CSV file with information about blogs that will be created" %}</p>
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}

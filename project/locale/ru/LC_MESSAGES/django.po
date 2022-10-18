@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-05 13:52+0000\n"
+"POT-Creation-Date: 2022-10-18 11:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -93,8 +93,14 @@ msgid "Create"
 msgstr "Создать"
 
 #: blogs_app/templates/blogs_app/csv_upload.html:4
+#, fuzzy
+#| msgid "Upload"
+msgid "csv upload"
+msgstr "Загрузить"
+
+#: blogs_app/templates/blogs_app/csv_upload.html:8
 msgid "Mass blogs adding"
-msgstr "Массовое добавление записей"
+msgstr "Массовое добавление блогов"
 
 #: blogs_app/templates/blogs_app/csv_upload.html:9
 msgid "Upload CSV file with information about blogs that will be created"
