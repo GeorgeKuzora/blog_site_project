@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{{ blog_details.title }}{% endblock %}
+
+{% block body %}
+    <h1>{{ blog_details.title }}</h1>
+    <p>{{ blog_details.author }}</p>
+    <p>{{ blog_details.date_created }}</p>
+    <div>{{ blog_details.contents }}</div>
+    {% if images %}
+        {% for img in images %}
+            <div>
+                <img src="{{ img.image.url }}" alt="Uploaded images"/>
+            </div>
+        {% endfor %}
+    {% else %}
+    {% endif %}
+    <hr>
+    <div>
+        <hr>
+        <h1>{% trans "Post your comments" %}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ commentary_form.as_div }}
+            <button type="submit">{% trans "Post" %}</button>
+        </form>
+    </div>
+    <div>
+        <h1>{% trans 'Commentaries' %}</h1>
+        {% if commentary_list %}
+            <div>
+                {% for commentary in commentary_list %}
+                    <hr>
+                    <p>{{ commentary.comment_body }}</p>
+                    <p>By: {{commentary.author.username}}</p>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div>
+                <p>{% trans "There is no commentaries yet." %}</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
