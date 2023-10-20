@@ -63,7 +63,7 @@ ROOT_URLCONF = "project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ['/home/georgiy/Documents/Code/Skillbox/blog_site/project/project/templates/'],
+        "DIRS": ['./project/templates/'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
